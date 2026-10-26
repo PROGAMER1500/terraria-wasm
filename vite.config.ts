@@ -3,6 +3,7 @@ import { dreamlandPlugin } from "vite-plugin-dreamland";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { writeFileSync } from "fs";
 import { execSync } from "child_process";
+import { singleHtmlPlugin } from "./single-html";
 
 export default defineConfig({
 	plugins: [
@@ -15,6 +16,7 @@ export default defineConfig({
 				writeFileSync("dist/MILESTONE", commit);
 			},
 		},
+		singleHtmlPlugin(),
 	],
 	base: "./",
 	server: {
