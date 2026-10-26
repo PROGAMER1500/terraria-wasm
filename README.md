@@ -58,6 +58,11 @@ To build the frontend for production, run:
 make publish
 ```
 
+The build also creates `dist/index.single.html`, a single-file version of the
+site that embeds the generated frontend, .NET runtime, and public assets. It
+still needs to be served from a secure, cross-origin-isolated origin for
+WebAssembly threads to work; configure the COOP and COEP headers above.
+
 <!--
 To build with simple download (where the game assets are downloaded from the server)
 ```
