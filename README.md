@@ -63,6 +63,9 @@ site that embeds the generated frontend, .NET runtime, and public assets. It
 still needs to be served from a secure, cross-origin-isolated origin for
 WebAssembly threads to work; configure the COOP and COEP headers above.
 
+The GitHub Actions workflow builds and uploads a frontend-only `index.single.html`
+artifact. It does not compile or include the Terraria runtime.
+
 <!--
 To build with simple download (where the game assets are downloaded from the server)
 ```
